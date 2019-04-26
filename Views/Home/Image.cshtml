@@ -1,0 +1,49 @@
+﻿@model DA.Models.Image
+
+@{
+    ViewData["Title"] = "Image";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h4>Describe Image</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            URL
+        </dt>
+        <dd class="col-sm-10">
+            <img src="@Html.DisplayFor(model => model.Url)"  style="width:200px; height:200px;"/>
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            Text:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.outputText)
+        </dd>
+        <dt class="col-sm-2">
+            Description:
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.desc)
+
+        </dd>
+        <dt class="col-sm-2">
+            Audio:
+        </dt>
+        <dd class="col-sm-10">
+            <audio controls preload='none'>
+                <source src='@Html.DisplayFor(model => model.audioSrc)' type='audio/mp3'>
+            </audio>
+        </dd>
+    </dl>
+    
+</div>
+
+

@@ -1,0 +1,28 @@
+﻿
+@page
+@model DA.Models.Image
+@{
+   // ViewData["Title"] = "Home page";
+}
+<div class="container">
+    <div class="text-center">
+        <h1 class="display-4">Descriptive Assitance</h1>
+    </div>
+    <form method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Post">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-2 imgUp">
+                    <label class="btn btn-primary" style="width:250px">
+                        Take/Upload a photo
+                        <input type="file" name="photo" accept="image/*;capture=camera" class="uploadFile img" style="width: 0px;height: 0px;overflow: hidden;">
+                    </label>
+                    <label class="btn btn-primary" style="width:250px">
+                        Upload
+                        <input class="uploadFile img" type="submit" style="width: 0px;height: 0px;overflow: hidden;" />
+                    </label>
+                    <div class="imagePreview"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
